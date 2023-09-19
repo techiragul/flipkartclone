@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flipkart</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="icon"
+      href="https://logos-world.net/wp-content/uploads/2020/11/Flipkart-Emblem.png"
+    />
+    <script src="node.js"></script>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <img
+          src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/flipkart-plus_8d85f4.png"
+          height="20px"
+          width="75px"
+        />
+        <p>
+          Explore
+          <scan class="plus-color">plus</scan>
+          <img
+            src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/plus_aef861.png"
+            width="10px"
+            height="10px"
+          />
+        </p>
+      </div>
+      <div class="search">
+        <input type="text" placeholder="Search for products,brands and more" />
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+        <div class="recentsearch">
+          <div class="recentsearch-list">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+            <p>Laptop or pc cleaner</p>
+          </div>
+
+          <p class="discovermore">Discover More</p>
+
+          <div class="recentsearch-list-discover">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <p>mobiles</p>
+          </div>
+
+          <div class="recentsearch-list-discover">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <p>shoes</p>
+          </div>
+
+          <div class="recentsearch-list-discover">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <p>shirts</p>
+          </div>
+
+          <div class="recentsearch-list-discover">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <p>sunglases</p>
+          </div>
+        </div>
+      </div>
+      <button class="loginbtn">Login</button>
+      <a class="navlink">Become a Seller</a>
+      <p class="navlink" class="angle-down">
+        more
+        <i class="fa-solid fa-angle-down"></i>
+      </p>
+      <p class="navlink" class="cart-shopping">
+        <i class="fa-solid fa-cart-shopping"></i>
+        Cart
+      </p>
+    </nav>
+    <main>
+      <button class="display-cart" onclick="displayCart()">Show cart</button>
+      <div id="cart-El">
+        <p id="carttxtEl"></p>
+      </div>
+      <div class="main-products">
+        <div class="main-product">
+          <div class="main-product__img">
+            <img
+              alt=""
+              src="https://rukminim2.flixcart.com/image/612/612/ksw4ccw0/watch/6/b/c/38024pp25-fastrack-men-original-imag6cu9xkhbgz4y.jpeg?q=70"
+            />
+          </div>
+          <div class="main-product__desc">
+            <p class="main-product__desc--title">fastrack m700</p>
+            <div class="price-container">
+              <p class="main-product__desc--price">700$</p>
+              <p class="main-product__desc--dummyprice"><del>1000$</del></p>
+            </div>
+
+            <p class="main-product__desc--offer">25% offer</p>
+            <button
+              class="addtocart_btn"
+              id="addtocart-btn0"
+              onclick="updateCart(0)"
+            >
+              Add to Cart
+            </button>
+            <button class="remove_btn" id="remove-btn0" onclick="removeCart(0)">
+              Remove
+            </button>
+          </div>
+        </div>
+
+        <div class="main-product">
+          <div class="main-product__img">
+            <img
+              alt=""
+              src="https://rukminim2.flixcart.com/image/612/612/xif0q/shirt/t/t/f/-original-imagzyafmyhqgkvq.jpeg?q=70"
+            />
+          </div>
+          <div class="main-product__desc">
+            <p class="main-product__desc--title">Fuber</p>
+            <div class="price-container">
+              <p class="main-product__desc--price">489$</p>
+              <p class="main-product__desc--dummyprice"><del>1489$</del></p>
+            </div>
+
+            <p class="main-product__desc--offer">67% offer</p>
+            <button
+              class="addtocart_btn"
+              id="addtocart-btn1"
+              onclick="updateCart(1)"
+            >
+              Add to Cart
+            </button>
+            <button class="remove_btn" id="remove-btn1" onclick="removeCart(1)">
+              Remove
+            </button>
+          </div>
+        </div>
+
+        <div class="main-product">
+          <div class="main-product__img">
+            <img
+              alt=""
+              src="https://rukminim2.flixcart.com/image/832/832/l4zxn680/trouser/n/k/l/40-el-p-cot-el-cielo-original-imagfrqrtyabmsvh.jpeg?q=70"
+            />
+          </div>
+          <div class="main-product__desc">
+            <p class="main-product__desc--title">El Cielo</p>
+            <div class="price-container">
+              <p class="main-product__desc--price">1000$</p>
+              <p class="main-product__desc--dummyprice"><del>1560$</del></p>
+            </div>
+
+            <p class="main-product__desc--offer">37% offer</p>
+            <button
+              class="addtocart_btn"
+              id="addtocart-btn2"
+              onclick="updateCart(2)"
+            >
+              Add to Cart
+            </button>
+            <button class="remove_btn" id="remove-btn2" onclick="removeCart(2)">
+              Remove
+            </button>
+          </div>
+        </div>
+        <div class="main-product">
+          <div class="main-product__img">
+            <img
+              alt=""
+              src="img loading="
+              eager
+              class="_396cs4 _2amPTt _3qGmMb"
+              alt="OnePlus Nord CE 2 Lite 5G (Blue Tide, 128 GB)"
+              src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/k/w/k/-original-imagg2abzhxjckxu.jpeg?q=70"
+              srcset="
+                https://rukminim2.flixcart.com/image/832/832/xif0q/mobile/k/w/k/-original-imagg2abzhxjckxu.jpeg?q=70 2x,
+                https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/k/w/k/-original-imagg2abzhxjckxu.jpeg?q=70 1x
+              "
+            />
+          </div>
+          <div class="main-product__desc">
+            <p class="main-product__desc--title">oneplus</p>
+            <div class="price-container">
+              <p class="main-product__desc--price">17893$</p>
+              <p class="main-product__desc--dummyprice"><del>23578$</del></p>
+            </div>
+
+            <p class="main-product__desc--offer">17% offer</p>
+            <button
+              class="addtocart_btn"
+              id="addtocart-btn3"
+              onclick="updateCart(3)"
+            >
+              Add to Cart
+            </button>
+            <button class="remove_btn" id="remove-btn3" onclick="removeCart(3)">
+              Remove
+            </button>
+          </div>
+        </div>
+        <div class="main-product">
+          <div class="main-product__img">
+            <img
+              loading="eager"
+              class="_396cs4"
+              alt="PHILIPS BT1233/18 Trimmer 30 min  Runtime 4 Length Settings"
+              src="https://rukminim2.flixcart.com/image/612/612/xif0q/trimmer/k/7/v/1-7-mm-bt1233-18-stainless-steel-cordless-philips-original-imagzgwgrdtxhgbu.jpeg?q=70"
+            />
+          </div>
+          <div class="main-product__desc">
+            <p class="main-product__desc--title">Trimmer</p>
+            <div class="price-container">
+              <p class="main-product__desc--price">750$</p>
+              <p class="main-product__desc--dummyprice"><del>1129$</del></p>
+            </div>
+
+            <p class="main-product__desc--offer">37% offer</p>
+            <button
+              class="addtocart_btn"
+              id="addtocart-btn4"
+              onclick="updateCart(4)"
+            >
+              Add to Cart
+            </button>
+            <button class="remove_btn" id="remove-btn4" onclick="removeCart(4)">
+              Remove
+            </button>
+          </div>
+        </div>
+        <div class="main-product">
+          <div class="main-product__img">
+            <img
+              class="_2r_T1I _396QI4"
+              alt=""
+              src="https://rukminim2.flixcart.com/image/832/832/ju79hu80/backpack/m/z/g/daredevil-12147-laptop-backpack-wildcraft-original-imaffdntxed6y84u.jpeg?q=70"
+            />
+          </div>
+          <div class="main-product__desc">
+            <p class="main-product__desc--title">laptop bag</p>
+            <div class="price-container">
+              <p class="main-product__desc--price">550$</p>
+              <p class="main-product__desc--dummyprice"><del>850$</del></p>
+            </div>
+
+            <p class="main-product__desc--offer">23% offer</p>
+            <button
+              class="addtocart_btn"
+              id="addtocart-btn5"
+              onclick="updateCart(5)"
+            >
+              Add to Cart
+            </button>
+            <button class="remove_btn" id="remove-btn5" onclick="removeCart(5)">
+              Remove
+            </button>
+          </div>
+        </div>
+        <div class="main-product">
+          <div class="main-product__img">
+            <img
+              loading="eager"
+              class="_396cs4 _2amPTt _3qGmMb"
+              alt="Compaq 108 cm (43 inch) Full HD LED Smart Android TV 2021 Edition with HDR10+, ChromeCast Ready , Dolby Audio Surround Sound"
+              src="https://rukminim2.flixcart.com/image/416/416/xif0q/television/h/o/h/cq4300fhdab-compaq-original-imaggarg46b6vshe.jpeg?q=70"
+              srcset="
+                https://rukminim2.flixcart.com/image/832/832/xif0q/television/h/o/h/cq4300fhdab-compaq-original-imaggarg46b6vshe.jpeg?q=70 2x,
+                https://rukminim2.flixcart.com/image/416/416/xif0q/television/h/o/h/cq4300fhdab-compaq-original-imaggarg46b6vshe.jpeg?q=70 1x
+              "
+            />
+          </div>
+          <div class="main-product__desc">
+            <p class="main-product__desc--title">Led TV</p>
+            <div class="price-container">
+              <p class="main-product__desc--price">55000$</p>
+              <p class="main-product__desc--dummyprice"><del>62000$</del></p>
+            </div>
+
+            <p class="main-product__desc--offer">12% offer</p>
+            <button
+              class="addtocart_btn"
+              id="addtocart-btn6"
+              onclick="updateCart(6)"
+            >
+              Add to Cart
+            </button>
+            <button class="remove_btn" id="remove-btn6" onclick="removeCart(6)">
+              Remove
+            </button>
+          </div>
+        </div>
+        <div class="main-product">
+          <div class="main-product__img">
+            <img
+              loading="eager"
+              class="_396cs4"
+              alt="Panasonic Lumix DC-FZ10002GW"
+              src="https://rukminim2.flixcart.com/image/312/312/xif0q/point-shoot-camera/x/v/e/dc-fz10002gw-lumix-digital-camera-3-20-1-dc-fz10002gw-panasonic-original-imagpc3xgfgzrpaa.jpeg?q=70"
+            />
+          </div>
+          <div class="main-product__desc">
+            <p class="main-product__desc--title">Canon camera</p>
+            <div class="price-container">
+              <p class="main-product__desc--price">25000$</p>
+              <p class="main-product__desc--dummyprice"><del>28500$</del></p>
+            </div>
+
+            <p class="main-product__desc--offer">11% offer</p>
+            <button
+              class="addtocart_btn"
+              id="addtocart-btn7"
+              onclick="updateCart(7)"
+            >
+              Add to Cart
+            </button>
+            <button class="remove_btn" id="remove-btn7" onclick="removeCart(7)">
+              Remove
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
