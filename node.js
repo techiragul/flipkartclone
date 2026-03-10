@@ -30,15 +30,51 @@ function updateCart(x) {
   message = "" + message + productNames[x] + " : " + prices[x] + "₹" + "\n";
   document.getElementById("addtocart-btn" + x).style.display = "none";
   document.getElementById("remove-btn" + x).style.display = "block";
-  // document.getElementById("addtocart-btn" + x).style.display = "none";
+  updateCartText();
 }
 function removeCart(x) {
   cartValue = cartValue - prices[x];
   message = message.replace(pairs[x], "");
   document.getElementById("remove-btn" + x).style.display = "none";
   document.getElementById("addtocart-btn" + x).style.display = "block";
+  updateCartText();
 }
-function displayCart() {
-  document.getElementById("cart-El").style.display = "block";
+
+function updateCartText() {
+  const carttxtEl = document.getElementById("carttxtEl");
+  if (!carttxtEl) return;
   carttxtEl.innerHTML = message + "\nTotal : " + cartValue + "₹";
 }
+
+function showCart() {
+  const cartEl = document.getElementById("cart-El");
+  if (!cartEl) return;
+  cartEl.style.display = "block";
+  updateCartText();
+  const btn = document.getElementById("cart-action-btn");
+  if (btn) btn.textContent = "Hide cart";
+}
+
+function hideCart() {
+  const cartEl = document.getElementById("cart-El");
+  if (!cartEl) return;
+  cartEl.style.display = "none";
+  const btn = document.getElementById("cart-action-btn");
+  if (btn) btn.textContent = "Show cart";
+}
+
+function toggleCart() {
+  const cartEl = document.getElementById("cart-El");
+  if (!cartEl) return;
+  if (cartEl.style.display === "block") {
+    hideCart();
+  } else {
+    showCart();
+  }
+}
+
+// Optional: keep existing API for old button usage
+function displayCart() {
+  showCart();
+}
+
