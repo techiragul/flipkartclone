@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -75,14 +75,24 @@
         more
         <i class="fa-solid fa-angle-down"></i>
       </p>
-      <p class="navlink" class="cart-shopping">
+      <p
+        class="navlink cart-shopping"
+        onclick="toggleCart()"
+        style="cursor: pointer"
+      >
         <i class="fa-solid fa-cart-shopping"></i>
         Cart
       </p>
     </nav>
     <main>
-      <button class="display-cart" onclick="displayCart()">Show cart</button>
       <div id="cart-El">
+        <button
+          class="display-cart"
+          id="cart-action-btn"
+          onclick="toggleCart()"
+        >
+          Hide cart
+        </button>
         <p id="carttxtEl"></p>
       </div>
       <div class="main-products">
